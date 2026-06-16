@@ -1,0 +1,16 @@
+Se incluye la Tabla~\ref{tab:balance} a modo de ejemplo. Solo contiene información sobre el balance de dos empresas ficticias. Debe incluirse también una leyenda, debajo de la tabla, junto con la fuente.
+\newline
+\begin{table}[ht]
+	\centering % esto centra la tabla
+	\begin{tabular}{c c c c} % centra las 4 columnas
+		\hline\hline %incluye líneas horizontales dobles
+		Empresa & Ingresos & Gastos & Otros \\ [0.5ex] 
+		\hline 
+		Tintileo  & 50000 & 83700 & 97000 \\
+		Packandgo & 47000 & 87700 & 23000 \\
+		\hline
+	\end{tabular}
+	\caption[Balance de empresas]{Dos empresas ficticias con las columnas de ingresos y gastos, para dos años que no se especifican. Fuente: elaboración propia.}
+	\label{tab:balance}
+	\label{table:nonlin} % is used to refer this table in the text
+\end{table}

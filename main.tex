@@ -1,0 +1,57 @@
+\documentclass[11pt,a4paper,spanish]{book}
+\usepackage{estilo_unir-1}
+\hypersetup{
+	colorlinks   = true, %Colours links instead of ugly boxes
+	urlcolor     = blue, %Colour for external hyperlinks
+	linkcolor    = black, %Colour of internal links
+	citecolor   = red %Colour of citations
+}
+\usepackage[nottoc]{tocbibind}
+
+%---------------------------
+%título de la asignatura, trabajo y autor
+%---------------------------
+\subject{Nombre de la asignatura}
+\title{Escribir el título del documento}
+\author{Nombre y Apellidos de los autores}
+\profesor{Nombre del profesor}
+\date{introducir fecha}
+
+%---------------------------
+%marges
+%---------------------------
+%\usepackage[margin=1.9cm]{geometry}
+%---------------------------
+%---------------------------
+%---------------------------
+%---------------------------
+\begin{document}
+\renewcommand{\listfigurename}{Índice de figuras}
+\renewcommand{\listtablename}{Índice de tablas}
+\renewcommand{\contentsname}{Índice de contenidos}
+\renewcommand{\figurename}{Figura}
+\renewcommand{\tablename}{Tabla} 
+
+\maketitle
+\frontmatter
+\tableofcontents
+\listoffigures
+Fijaos que SOLO aparece el título de cada figura, no aparece toda la leyenda ni la fuente. \\
+(QUITAR ESTA PÁGINA SI NO HAY FIGURAS) 
+\listoftables
+Fijaos que SOLO aparece el título de cada tabla, no aparece toda la leyenda ni la fuente. \\
+(QUITAR ESTA PÁGINA SI NO HAY TABLAS)
+
+\input{capitulos/resumen}
+\input{capitulos/abstract}
+
+\mainmatter
+
+\input{capitulos/introduccion}
+\input{capitulos/objetivos}
+\input{capitulos/enunciado-problema}
+\input{capitulos/desarrollo-trabajo}
+\input{capitulos/conclusiones}
+\input{capitulos/bibliografia}
+
+\end{document}

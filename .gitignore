@@ -1,0 +1,55 @@
+# LaTeX build artifacts
+*.acn
+*.acr
+*.alg
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.brf
+*.fdb_latexmk
+*.fls
+*.glg
+*.glo
+*.gls
+*.glsdefs
+*.idx
+*.ilg
+*.ind
+*.ist
+*.lof
+*.log
+*.lol
+*.lot
+*.nav
+*.out
+*.run.xml
+*.snm
+*.synctex
+*.synctex.gz
+*.toc
+*.vrb
+*.xdv
+
+# Bibliography and glossary temporary files
+*-blx.bib
+*.mw
+
+# Generated documents
+*.dvi
+*.ps
+*.pdf
+
+# LaTeX editor backups and temporary files
+*.bak
+*.sav
+*.tmp
+*~
+.#*
+*.swp
+*.swo
+
+# latexmk cleanup directories
+_latexmk/
+latex.out/
+build/
