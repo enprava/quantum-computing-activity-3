@@ -1,3 +1,13 @@
 \chapter{Enunciado del problema}
 
-Esquematizar claramente los enunciados de los problemas, cuestiones o las ideas que queremos demostrar. Podemos extender el enunciado de la Actividad para mejorarlo o para dejar más claro aquello que vamos a solucionar.
+Una empresa de telecomunicaciones está desplegando una red de Distribución de Claves Cuánticas (QKD) mediante satélites de órbita baja (LEO). Para que el sistema funcione correctamente, los telescopios situados en tierra deben mantener un alineamiento extremadamente preciso con el satélite durante todo su desplazamiento.
+
+Sin embargo, los motores de seguimiento y los sistemas de enfriamiento del telescopio generan microvibraciones mecánicas prácticamente imperceptibles. Estas vibraciones introducen un ruido armónico, es decir, una frecuencia parásita periódica, que puede desequilibrar los espejos ópticos y corromper los datos transmitidos durante el enlace cuántico.
+
+El equipo de ingeniería necesita identificar la frecuencia exacta de dicha vibración para poder cancelarla electrónicamente. La dificultad principal es que la señal útil de vibración se encuentra enterrada en grandes volúmenes de ruido térmico y ambiental aleatorio.
+
+Para detectarla con precisión milimétrica, se toman muestras a una velocidad muy elevada, lo que genera un vector de datos masivo de $2^{30}$ puntos. Esto equivale a más de mil millones de mediciones que deben analizarse en un intervalo de tiempo muy reducido.
+
+En un enfoque clásico, el procesamiento de estos datos se realizaría mediante la Transformada Rápida de Fourier (FFT). No obstante, para el volumen de datos considerado, una computadora clásica tarda demasiado tiempo en completar el análisis en tiempo real. Como consecuencia, no es posible corregir la vibración antes de que el satélite abandone la ventana de visibilidad y se pierda la conexión.
+
+Por tanto, el problema consiste en identificar de forma eficiente la frecuencia dominante asociada al ruido armónico dentro de una señal masiva y ruidosa, con el objetivo de permitir una corrección activa del sistema óptico durante el paso del satélite.
