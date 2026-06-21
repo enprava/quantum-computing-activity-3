@@ -1,45 +1,32 @@
 \chapter{Introducción}
 
-En la Introducción se debe resumir de forma esquemática pero suficientemente clara lo esencial de cada una de las partes del trabajo y, sobre todo, aprovechar para explicar conceptos que puedan ser de utilidad después. 
-\newline
+Este capítulo presenta el marco general del Trabajo y sitúa la algoritmia cuántica como eje principal del estudio. Para ello, se introducen las razones que motivan el tema, se justifica su relevancia dentro de la computación cuántica aplicada y se describe la organización seguida en el resto del documento.
 
-La lectura de esta parte debe contextualizar perfectamente todo el Trabajo y debe estar PLAGADA DE REFERENCIAS (más adelante se describe cómo hacerlo).
-\newline
+\section{Motivación del tema}
 
-Es una parte muy importante de la memoria. Las ideas principales a transmitir son la identificación del problema a tratar, la justificación de su importancia, esbozo de los objetivos generales a grandes rasgos y un adelanto de la contribución que esperas hacer.
+La computación cuántica constituye un modelo de cálculo que aprovecha propiedades de la mecánica cuántica, como la superposición, la interferencia y el entrelazamiento. La superposición permite representar combinaciones lineales de estados cuánticos, la interferencia modifica las amplitudes de probabilidad asociadas a dichos estados y el entrelazamiento introduce correlaciones no clásicas entre sistemas separados \citep{dirac1930,bell1964}. Estas propiedades permiten procesar información de una forma distinta a la computación clásica. Su interés no reside únicamente en construir ordenadores más rápidos, sino en diseñar algoritmos capaces de explotar esas propiedades para resolver ciertos tipos de problemas con una complejidad menor que la de los métodos clásicos conocidos \citep{nielsen2010}.
 
-A modo de guía, la Introducción debe contener estos tres apartados:
+Dentro de este contexto, la algoritmia cuántica ocupa un papel central. Un ordenador cuántico solo resulta útil si existe un procedimiento que traduzca un problema concreto en operaciones cuánticas sobre qubits y que, tras la medición, permita recuperar una respuesta significativa. Por ello, el estudio de la computación cuántica no puede separarse del análisis de sus algoritmos, la preparación de estados, la aplicación de puertas cuánticas, el uso de oráculos, la amplificación de amplitudes y la interpretación probabilística de los resultados forman parte esencial del diseño de soluciones cuánticas \citep{nielsen2010}.
+
+Los primeros resultados relevantes mostraron que algunos problemas podían beneficiarse de este nuevo paradigma. El algoritmo de \cite{shor1994} demostró que la factorización de enteros y el cálculo de logaritmos discretos podían abordarse eficientemente en un computador cuántico ideal, con importantes implicaciones para la criptografía clásica. Por otra parte, el algoritmo de \cite{grover1996} introdujo una mejora cuadrática para la búsqueda no estructurada, mostrando que incluso problemas sin una estructura algebraica evidente podían acelerarse mediante técnicas de amplificación de amplitud. Estos ejemplos ilustran que la ventaja cuántica depende tanto del problema elegido como de la forma en que se codifica y se manipula la información.
+
+\section{Justificación del tema}
+
+En la actualidad, una parte importante del trabajo en algoritmia cuántica consiste en identificar problemas donde estas técnicas puedan aportar valor práctico. No todos los problemas son adecuados para una solución cuántica, y no basta con sustituir un algoritmo clásico por uno cuántico. Es necesario analizar la estructura matemática del problema, el tamaño de los datos, la forma de entrada y salida, el coste de preparar los estados cuánticos y las limitaciones físicas del hardware disponible \citep{nielsen2010,preskill2018}.
+
+Esta perspectiva resulta especialmente importante en aplicaciones relacionadas con optimización, simulación, criptografía, búsqueda, análisis de señales y procesamiento de información. En estos ámbitos, la posible ventaja cuántica depende de formular correctamente el problema y de elegir un algoritmo que aproveche de manera efectiva los recursos del modelo cuántico. Por tanto, estudiar la algoritmia cuántica desde un caso aplicado permite comprender tanto su potencial como sus restricciones reales \citep{montanaro2016,preskill2018}.
+
+Este Trabajo se enfoca en la algoritmia cuántica desde una perspectiva aplicada. En primer lugar, se plantea la necesidad de seleccionar un problema realista que pueda formularse de manera compatible con un algoritmo cuántico. A continuación, se estudia cómo una solución cuántica puede aprovechar recursos propios del modelo, como la superposición y la interferencia, para obtener información relevante de forma eficiente. Finalmente, se compara de manera conceptual esta aproximación con una estrategia clásica equivalente, prestando atención tanto a sus posibles ventajas como a sus restricciones \citep{nielsen2010,montanaro2016,preskill2018}.
+
+\section{Estructura del Trabajo}
+
+El Trabajo se organiza en una secuencia de capítulos que permite avanzar desde el marco conceptual general hasta la formulación del caso de estudio y el planteamiento de una solución basada en algoritmia cuántica. La estructura es la siguiente:
+
 \begin{itemize}
-\item Motivación / justificación del tema a tratar
-\item Planteamiento del Trabajo (atención a la mayúscula de "Trabajo": cuando nos referimos a nuestro documento, ese Trabajo va en mayúscula)
-\item Estructura del Trabajo
+	\item En la introducción se presenta el contexto general de la computación cuántica, se motiva el interés de la algoritmia cuántica, se justifica la elección del tema y se describe la organización del documento.
+	\item En el capítulo de objetivos se establecen las metas generales y específicas del estudio, manteniendo el foco en la identificación de un problema aplicable a la computación cuántica y en el diseño de una solución algorítmica.
+	\item En el capítulo de enunciado del problema se presenta el caso elegido, se describe el contexto en el que aparece y se concreta la dificultad que se pretende abordar.
+	\item En el capítulo de desarrollo del Trabajo se expone la propuesta de solución, se explican los fundamentos del algoritmo cuántico considerado y se analiza conceptualmente su relación con una estrategia clásica equivalente.
+	\item En el capítulo de conclusiones se sintetizan los principales resultados del análisis, las limitaciones de la propuesta y las posibles líneas de ampliación futura.
 \end{itemize}
 
-\vspace{1cm}
-{\bf{ATENCIÓN, CÓMO REFERENCIAR.}}
-
-A continuación vamos a ver qué son, qué no son y para qué  sirven las referencias bibliográficas:
-\begin{itemize}
-	\item las referencias NO están para rellenar
-	\item las referencias SÍ son un TRIBUTO a las personas que hicieron en primer lugar una investigación o aportaron una idea
-	\item la referencias citan trabajo que acompaña una idea o un concepto, NO se usa UNA referencia para todo un párrafo que aglutina diferentes conceptos
-	\item deben citarse LOS TRABAJOS ORIGINALES DE LOS AUTORES, y no un libro de texto donde he visto que hablan de algo
-	\item os libros de texto se pueden referencial excepcionalmente, porque el libro es sobresaliente y conocido en el campo y/o porque quiero apoyarme en una explicación conocida para un determinado concepto o cuestión, pero no como origen del concepto del que se habla
-\end{itemize}
-
-\vspace{1cm}
-{\bf{VEAMOS EJEMPLOS DE CITAS.}}
-
-Vamos a ver los dos tipos de citas que vamos a utilizar normalmente en los trabajos y actividades:
-\begin{itemize}
-	\item CITA INDIRECTA: estamos hablando de algo e introcimos la referencia sobre la que apoyamos esa idea. Por ejemplo, hablado de los procesadores de texto, LATEX  \citep{lamport1994} es tipo de editor con el que se consiguen resultados de gran calidad
-	\item CITA DIRECTA: nos referimos directamente a un trabajo y lo citamos. Por ejemplo, según \cite{ackerman2017}, la liga de fútbol inglesa debe tener torneos de desempate
-\end{itemize}
-
-Según el párrafo anterior con la cita indirecta aparecerá entre paréntesis el apellido y el año, separados por una coma; en el caso de varios autores, podrán aparecer hasta tres apellidos y, cuando son más, aparecerá el primero seguido de "et al." (y después el año separado con una coma). Con la cita directa solo va entre paréntesis el año, pero no los autores. Podéis mirar el apartado de Bibliografía para ver cómo han quedado estas citas.
-\newline
-
-En esta Actividad, cuando vamos a resolver problemas, PUEDE utilizarse libros de texto como referencias de procedimientos matemáticos que vamos a utilizar, pero sin olvidar el párrafo anterior. Es decir, sería conveniente citar ARTÍCULOS ORIGINALES de donde surgieron esos desarrollos.
-\newline
-
-Para consultar detenidamente la formas de referenciar, debéis seguir el formato APA del siguiente documento: \url{https://bibliografiaycitas.unir.net/documentos/APA_7ed_UNIR.pdf}
